@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import "reset";
+@import "font";
+// design
+* {
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    border: 0 none;
+    vertical-align: top;
+}
+button {
+    border: 0 none;
+    background: transparent;
+    cursor: pointer;
+}
+body {
+    color:var(--black);
+    background: var(--white);
+    font: {
+        family: 'SUIT';
+        size: 18px;
+        weight: 400;
+    }
+    line-height: 1.6;
+    letter-spacing: -0.05em;
+    overflow-x: hidden
+}
+// header
+.header{
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 48px 105px;
+    }
+}
+.btn-menu {
+    &__line {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: #2E008B;
+    }
+}
+// section0
+.section{
+    &--intro {
+        padding: 0 24px;
+    }
+}
+.slogan{
+    font: {
+        size: 150px;
+        weight: 700;
+    }
+    text-align: center;
+}
