@@ -31,8 +31,14 @@ body {
     letter-spacing: -0.05em;
     overflow-x: hidden
 }
+// common
+.image-wrap {overflow:hidden;}
 // header
 .header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     &__wrap {
         display: flex;
         justify-content: space-between;
@@ -47,16 +53,99 @@ body {
         background: #2E008B;
     }
 }
-// section0
+// section
 .section{
+    border: 1px solid #2E008B;
     &--intro {
-        padding: 0 24px;
+        overflow: hidden;
+        height: 100vh;
+        padding: 128px 24px 0;
+    }
+    &--about, &--history {
+        // height: 300vh;
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+    }
+    &__content {
+        // height: 100vh;
+        transition: all 0.3s ease-out;
+        &--about {
+            height: 300vh;
+        }
     }
 }
 .slogan{
     font: {
-        size: 150px;
+        // size: 150px;
+        size: 7.5vw;
         weight: 700;
     }
     text-align: center;
+}
+.main-title {
+    font-size: 60px;
+    font-weight: bold;
+}
+.main-desc {
+    font-size: 24px;
+    font-weight: 500;
+}
+// about
+.about-bg {
+    position: relative;
+    top: 20%;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    .section__content.fixed & {
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    &--01 {
+        width: 100%;
+        background: url(../images/2.jpg) no-repeat;
+        background-size: cover;
+    }
+    &--02 {
+        width: 100%;
+        background: url(../images/3.jpg) no-repeat;
+        background-size: cover;
+    }
+    &.on {
+        opacity: 1;
+        z-index: 50;
+    }
+}
+.stroketext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: transparent;
+    font-size: 29vw;
+    font-weight: bold;
+    text-align: center;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #fff;
+    &--fill {
+        color: #fff;
+        height: 0;
+        overflow: hidden;
+        transition: all 1s ease-out 0.5s;
+        &.on {
+            height: 100%;
+        }
+    }
+}
+// history
+.history-bg {
+    height: 100vh;
 }

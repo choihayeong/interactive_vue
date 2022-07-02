@@ -14,8 +14,8 @@ dist-ssr
 coverage
 *.local
 
-src/assets/font
-src/assets/scss/_font.scss
+# src/assets/font
+# src/assets/scss/_font.scss
 
 /cypress/videos/
 /cypress/screenshots/
