@@ -1,7 +1,7 @@
 <template>
 	<footer class="footer">
 		<div class="footer__wrap">
-			Footer
+			<img src="../../assets/images/footer.jpg">
 		</div>
 	</footer>
 </template>

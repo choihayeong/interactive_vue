@@ -15,7 +15,7 @@ export default {
         const fillStrokeText = document.querySelector('.stroketext--fill');
 
         function strokeEvent() {
-            if (strokeText.parentElement.parentElement.classList.contains('fixed')) {
+            if (strokeText.parentElement.parentElement.classList.contains('active')) {
                 fillStrokeText.classList.add('on');
             } else {
                 fillStrokeText.classList.remove('on');

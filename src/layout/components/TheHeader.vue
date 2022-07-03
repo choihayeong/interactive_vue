@@ -12,4 +12,14 @@
 			</button>
 		</div>
 	</header>
+	<Gnb />
 </template>
+
+<script>
+import { Gnb } from '@/components'
+export default {
+	components: {
+		Gnb
+	}
+}
+</script>

@@ -1,5 +1,5 @@
 <template>
-    <div id="aboutbg1" class="about-bg about-bg--01 on">
+    <div id="aboutbg1" class="about-bg about-bg--01">
         <StrokeText />
     </div>
     <div id="aboutbg2" class="about-bg about-bg--02">
@@ -39,35 +39,38 @@ export default {
                 scrollRatio = currentPosition / content.offsetHeight;
 
 				// about-bg
-				if (scrollRatio > 0 && scrollRatio <= 0.33) {
+				if (scrollRatio >= 0.01 && scrollRatio <= 0.33) {
 					bgNum = 1;
 				} else if (scrollRatio > 0.33 && scrollRatio <= 0.67) {
                     bgNum = 2;
                 } else if (scrollRatio > 0.67 && scrollRatio < 0.9) {
                     bgNum = 3;
+                } else  {
+                    bgNum = 0;
                 }
 
-                // switch (bgNum) {
-                //     case 1:
-                //         aboutBg1.classList.add('on');
-                //         aboutBg2.classList.remove('on');
-                //         aboutBg3.classList.remove('on');
-                //         break;
-                //     case 2:
-                //         aboutBg1.classList.remove('on');
-                //         aboutBg2.classList.add('on');
-                //         aboutBg3.classList.remove('on');
-                //         break;
-                //     case 3:
-                //         aboutBg1.classList.remove('on');
-                //         aboutBg2.classList.remove('on');
-                //         aboutBg3.classList.add('on');
-                //         break;
-                //     default:
-                //         aboutBg1.classList.remove('on');
-                //         aboutBg2.classList.remove('on');
-                //         aboutBg3.classList.remove('on');
-                // }
+                switch (bgNum) {
+                    case 1:
+                        aboutBg1.classList.add('on');
+                        aboutBg2.classList.remove('on');
+                        aboutBg3.classList.remove('on');
+                        break;
+                    case 2:
+                        aboutBg1.classList.remove('on');
+                        aboutBg2.classList.add('on');
+                        aboutBg3.classList.remove('on');
+                        break;
+                    case 3:
+                        aboutBg1.classList.remove('on');
+                        aboutBg2.classList.remove('on');
+                        aboutBg3.classList.add('on');
+                        break;
+                    case 0:
+                        aboutBg1.classList.remove('on');
+                        aboutBg2.classList.remove('on');
+                        aboutBg3.classList.remove('on');
+                        break;
+                }
             }
         }
 

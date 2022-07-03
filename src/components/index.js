@@ -1,4 +1,10 @@
 export { default as Slogan } from './Slogan.vue';
 export { default as MainTitle } from './MainTitle.vue';
 export { default as StrokeText } from './StrokeText.vue';
-export { default as AboutBg } from './MainAbout/AboutBg.vue';
+export { default as AboutBg } from './Main/AboutBg.vue';
+export { default as HistoryBg } from './Main/HistoryBg.vue';
+export { default as GroupSlider } from './Main/GroupSlider.vue';
+export { default as NowBg } from './Main/NowBg.vue';
+export { default as ConnectBg } from './Main/ConnectBg.vue';
+export { default as Showroom } from './Showroom.vue';
+export { default as Gnb } from './Gnb.vue';
