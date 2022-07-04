@@ -106,24 +106,24 @@ export default {
 					content.classList.remove('active');
 				}
 
-				if (content === sectionNow) {
-					if (scrollRatio < 0.01) {
-						content.classList.remove('active');
-					}
-				}
-				if (content === sectionConnect) {
-					if (scrollRatio < 0.01) {
-						content.classList.remove('active');
-					}
-				}
+				// if (content === sectionNow && content.classList.contains('active')) {
+				// 	if (scrollRatio < 0.01) {
+				// 		content.classList.remove('active');
+				// 	}
+				// }
+				// if (content === sectionConnect && content.classList.contains('active')) {
+				// 	if (scrollRatio < 0.01) {
+				// 		content.classList.remove('active');
+				// 	}
+				// }
             }
         }
 
         function titleAnimation() {
             calcHeight(contentSection1);
             calcHeight(contentSection2);
-            calcHeight(sectionNow);
-            calcHeight(sectionConnect);
+            // calcHeight(sectionNow);
+            // calcHeight(sectionConnect);
         }
 
         window.addEventListener('resize', calcHeight);

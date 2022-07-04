@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>효성그룹</title>
+	<script src="common/jquery-latest.min.js"></script>
+	<script src="common/jquery.easing.min.js"></script>
+	<script src="common/swiper/swiper-bundle.min.js"></script>
+	<script src="common/aos/aos.js"></script>
+	<script src="common/jquery.counterup.min.js"></script>
+	<script src="common/waypoints.min.js"></script>
+	<script src="common/common.js"></script>
+	<link rel="stylesheet" href="common/aos/aos.css">
+	<link rel="stylesheet" href="common/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="common/common.css">
+	<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+	<!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+</head>
+<body>
+<div id="wrap" class="wrap">
+	<!-- HEADER -->
+	<header id="header" class="header">
+		<div class="header__wrap">
+			<h1 class="logo">
+				<img src="./imgs/logo.png">
+			</h1>
+			<button type="button" class="btn-menu">
+				<span class="btn-menu__line btn-menu__line--top"></span>
+				<span class="btn-menu__line btn-menu__line--bottom"></span>
+			</button>
+		</div>
+	</header>
+	<!-- // -->
+    <!-- GNB -->
+    <nav class="gnb">
+        <ul>
+
+        </ul>
+    </nav>
+    <!-- // -->
+	<!-- MAIN-INTRO -->
+    <section class="main-intro">
+        <h2 class="slogan">
+            CREATIVITY INSPIRED
+        </h2>
+        <div class="image-wrap image-wrap--slogan">
+            <img src="./imgs/1.jpg">
+        </div>
+    </section>
+	<!-- // -->
+	<!-- BEGINNING -->
+    <section class="main-beginning">
+        <div class="section-title" data-aos="fade-up">
+            <div class="section-title__inner">
+                <img src="./imgs/text01.png">
+            </div>
+        </div>
+        <div class="section-content section-content--beginning">
+            <div class="stroketext stroketext--default">
+                1966
+            </div>
+            <div class="stroketext stroketext--fill">
+                1966
+            </div>
+        </div>
+    </section>
+    <!-- // -->
+    <!-- HISTORY -->
+    <section class="main-history">
+        <div class="section-title" data-aos="fade-up">
+            <div class="section-title__inner">
+                <img src="./imgs/text02.png">
+            </div>
+        </div>
+        <div class="section-content section-content--history">
+            <div class="main-history__text">
+                <img src="./imgs/3.jpg">
+            </div>
+            <div class="main-history__button">
+                <img src="./imgs/btn01.png">
+            </div>
+            <div class="main-history__contents">
+                <img src="./imgs/4.png" style="transform:translate3d(20%, 0 , 0)">
+            </div>
+        </div>
+    </section>
+    <!-- // -->
+    <!-- SUBSIDIARY -->
+    <section class="main-subsidiary">
+        <div class="section-title" data-aos="fade-up">
+            <img src="./imgs/text03.png">
+        </div>
+        <div class="section-content section-content--subsidiary">
+            <div class="subsidary-slider">
+                <img src="./imgs/temp_slider.jpg">
+            </div>
+        </div>
+    </section>
+    <!-- // -->
+    <!-- STORY -->
+    <section class="main-story">
+        <div class="main-story__inner">
+            <img src="./imgs/temp_story.jpg">
+        </div>
+    </section>
+    <!-- // -->
+    <!-- CONNECT -->
+    <section class="main-connect">
+        <div class="main-connect__inner">
+            <img src="./imgs/temp_connect.jpg">
+        </div>
+    </section>
+    <!-- // -->
+	<!-- SUSTAIN -->
+	<section class="main-sustain">
+        <div class="section-title" data-aos="fade-up">
+            <img src="./imgs/text04.png">
+        </div>
+        <div class="main-sustain__content">
+            <img src="./imgs/temp_sustain.jpg">
+        </div>
+	</section>
+	<!-- // -->
+    <!-- SHOWROOM -->
+    <aside class="showroom">
+        <div class="showroom__text">
+            <img src="./imgs/text05.png">
+        </div>
+        <div class="showroom__button" style="margin-top:50px">
+            <img src="./imgs/btn02.png">
+        </div>
+    </aside>
+    <!-- // -->
+	<!-- FOOTER -->
+	<footer class="footer">
+		<img src="./imgs/footer.jpg">
+	</footer>
+	<!-- // -->
+</div>
+<script>
+	AOS.init({
+        duration: 800,
+		once: false,
+		offset: 0,
+    });
+	$(function () {
+		$(window).scroll(function() {
+
+		});
+	});
+
+    const intro = document.querySelector('.main-intro');
+    const beginning = document.querySelector('.main-beginning');
+    const history = document.querySelector('.main-history');
+    const subsidiary = document.querySelector('.main-subsidiary');
+    const story = document.querySelector('.main-story');
+    const connect = document.querySelector('.main-connect');
+    const sustain = document.querySelector('.main-sustain');
+    const showroom = document.querySelector('.showroom');
+
+    function calcHeight(content) {
+        let currentScroll = window.pageYOffset;
+        let start = 0;
+        let end = content.offsetHeight;
+        let scrollRatio = 0;
+
+        if (currentScroll >= content.offsetTop && currentScroll <= (content.offsetTop + content.offsetHeight)) {
+            let currentPosition = currentScroll - content.offsetTop;
+            scrollRatio = currentPosition / content.offsetHeight;
+            
+            console.log(`Section: ${scrollRatio}`);
+
+            // if (scrollRatio >= 0.01 && scrollRatio <= 0.99) {
+            //     content.classList.add('active');
+            // } else {
+            //     content.classList.remove('active');
+            // }
+
+            // if (content === sectionNow && content.classList.contains('active')) {
+            // 	if (scrollRatio < 0.01) {
+            // 		content.classList.remove('active');
+            // 	}
+            // }
+            // if (content === sectionConnect && content.classList.contains('active')) {
+            // 	if (scrollRatio < 0.01) {
+            // 		content.classList.remove('active');
+            // 	}
+            // }
+        }
+    }
+    function motionEffect() {
+        calcHeight(intro);
+        calcHeight(beginning);
+        calcHeight(history);
+        calcHeight(subsidiary);
+        calcHeight(connect);
+        calcHeight(sustain);
+        calcHeight(showroom);
+    }
+
+    window.addEventListener('resize', calcHeight);
+    window.addEventListener('scroll', motionEffect);
+</script>
+</body>
+</html>

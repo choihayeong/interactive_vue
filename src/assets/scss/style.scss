@@ -99,11 +99,17 @@ body {
             min-height: 100vh;
         }
         &--now {
+            position: relative;
             height: 200vh;
             padding: 200px 0;
+            background: #fff;
+            z-index: 50;
         }
         &--connect {
+            position: relative;
             height: 100vh;
+            background: #fff;
+            z-index: 50;
         }
         &--sustain {
             // opacity: 0;
@@ -140,12 +146,12 @@ body {
     z-index: -1;
     &--01 {
         width: 100%;
-        background: url(../images/2.jpg) no-repeat;
+        background: url(@/assets/images/2.jpg) no-repeat;
         background-size: cover;
     }
     &--02 {
         width: 100%;
-        background: url(../images/3.jpg) no-repeat;
+        background: url(@/assets/images/3.jpg) no-repeat;
         background-size: cover;
     }
     &.on {
@@ -260,7 +266,7 @@ body {
 .showroom {
     width: 100%;
     height: 600px;
-    background: url(../images/showroom.jpg) no-repeat;
+    background: url(../assets/images/showroom.jpg) no-repeat;
     background-position-x: center;
     background-position-y: 0%;
     background-size: 110%;
