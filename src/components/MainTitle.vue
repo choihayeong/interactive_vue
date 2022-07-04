@@ -53,13 +53,17 @@ export default {
                 let currentPosition = currentScroll - title.offsetTop;
                 scrollRatio = currentPosition / title.offsetHeight;
             
-                console.log(`MainTitle: ${scrollRatio}`);
+                // console.log(`MainTitle: ${scrollRatio}`);
 
                 if (scrollRatio >= 0.01 && scrollRatio <= 0.75) {
                     title.querySelector('.titlewrap').classList.add('active');
                 } else {
                     title.querySelector('.titlewrap').classList.remove('active');
                 }
+
+                if (scrollRatio < 0.01) {
+					title.querySelector('.titlewrap').classList.remove('active');
+				}
 
                 if (scrollRatio >= 0.67) {
                     title.nextSibling.classList.add('active');

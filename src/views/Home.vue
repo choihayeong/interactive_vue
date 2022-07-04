@@ -98,11 +98,15 @@ export default {
                 let currentPosition = currentScroll - content.offsetTop;
                 scrollRatio = currentPosition / content.offsetHeight;
 				
-				console.log(`Section: ${scrollRatio}`);
+				// console.log(`Section: ${scrollRatio}`);
 
 				if (scrollRatio >= 0.01 && scrollRatio <= 0.99) {
 					content.classList.add('active');
 				} else {
+					content.classList.remove('active');
+				}
+
+				if (scrollRatio < 0.01) {
 					content.classList.remove('active');
 				}
 

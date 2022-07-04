@@ -26,7 +26,7 @@ export default {
                 let currentPosition = currentScroll - content.offsetTop;
                 scrollRatio = currentPosition / content.offsetHeight;
 
-                // console.log(scrollRatio);
+                console.log(scrollRatio);
 
                 groupSlider.setAttribute('style', 'position: relative');
 
